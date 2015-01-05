@@ -1,8 +1,8 @@
 // appIzer
-// version: pre-alpha
-//  used for easily making FORMs as a web-app
-//  jQuery(UI) Plugin-ish now
-//  Looking at React...
+// version: DEMO -- FOR_DISPLAY_ONLY!
+// pushing demo-specific data in for pure client example,
+//  this should be obviously useless unless you're doing the same thing.
+//  basically the same with appIzer.update() redone
 
 ;(function( $,window,document,undefined ) {
 
@@ -36,22 +36,15 @@
 
     // update display forms - probably better as refresh()?
     $.fn.appIzer.update = function(input) {
-
-        // Get JSON response as {nextID:'id',toFill:htmlReplace}
-        $.getJSON('./backend/header.php?d='+input).done(function(data) {
-            if (data.toFill) {
-                // Check type of fill field
-                if ($('#'+data.nextID).attr('multiple')=='multiple') {
-                    $('#div'+data.nextID).remove();
-                    $('#'+data.nextID).html(data.toFill);
-                    $('#'+data.nextID).appIzer.makePretty(data.nextID);
-                } else {
-                    $('#'+data.nextID).html(data.toFill);
-                }
-                $.fn.appIzer.update($('#'+data.nextID).val());
-            }
-        })
-    .fail(function(jqxHr,settings,exception){console.log(exception);});
+console.log(input);
+        // Push example values in as fields change
+        if (/^\d{2}\/\d{2}\/\d{4}$/.test(input)) {
+            $('#truck').html('<option value="518">518</option><option value="610">610</option>');
+        }
+        if (input == '3') {
+            $('#techs').html('<option value="Driver" selected>Driver</option><option value="Passenger">Passenger</option>');
+            $.fn.appIzer.makePretty('techs');
+        }
     };
     
     // applies effects to given element

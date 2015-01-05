@@ -23,6 +23,16 @@ label
  background-color: #0a7;
 }
 
+.header-bar h1#logo
+{
+ margin: 0;
+ margin-top: 4px;
+ font-size: 1.5em;
+ padding-left: 80px;
+ background-image: url(./cleanguy.png);
+ background-repeat: no-repeat;
+}
+
 .header-bar span
 {
  width: 100%;
