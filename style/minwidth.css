@@ -1,0 +1,72 @@
+/* Large screen devices */
+
+form
+{
+ width: 95%;
+ margin-top: 1em;
+ margin-left: 2.5%;
+ border: 1px solid #000;
+}
+
+.notFullsize
+{
+ display: none;
+}
+
+.onlyFullsize
+{
+ display: initial;
+}
+
+/* box model fix */
+
+input, textarea, select, button
+{
+ -webkit-box-sizing: border-box; /* legacy WebKit */
+ -moz-box-sizing: border-box; /* Gecko */
+ box-sizing: border-box;
+}
+
+/* Header style */
+
+span.headerLbl
+{
+ text-align: center;
+}
+
+form#header:after {
+ content:"";
+ display:table;
+ clear:both;
+}
+
+
+form#header label
+{
+ float: left;
+ white-space: nowrap;
+ width: 45%;
+ margin-left: 3.33%;
+ margin-top: 1em;
+ font-size: 2em;
+ font-style: italic;
+ border: 1px solid #000;
+}
+
+form#header input,select
+{
+ text-align: center;
+ font-size: 1em;
+ padding: 1em;
+ border: none;
+ vertical-align: middle;
+}
+
+div.multiSelect
+{
+ display: inline-block;
+ vertical-align: middle;
+ margin-top: 0;
+ text-align: center;
+}
+

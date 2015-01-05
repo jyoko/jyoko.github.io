@@ -1,0 +1,86 @@
+/* Small-screen devices */
+
+label
+{
+ display: block;
+ padding-top: 1em;
+ margin-bottom: 1em;
+ font-size: 3em;
+ border-top: 2px solid #006848;
+}
+
+/* Floating header bar */
+
+.header-bar
+{
+ display: flex;
+ width: 100%;
+ height: 70px;
+ flex-direction: row;
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ background-color: #0a7;
+}
+
+.header-bar span
+{
+ width: 100%;
+ text-align: right;
+}
+
+/* Header form styles */
+
+form#header
+{
+ padding-top: 70px;
+}
+
+form#header label
+{
+ font-style: italic;
+}
+
+form#header input,select
+{
+ font-size: 1em;
+ font-style: none;
+ margin-top: 1em;
+ text-align: center;
+ border: none;
+}
+
+/* Sheet form styles */
+
+form#sheet label
+{
+ font-weight: bold;
+}
+
+form#sheet input,textarea
+{
+ font-size: 3em;
+ font-style: none;
+ margin-bottom: 1.5em;
+ text-align: center;
+}
+
+/* jQuery overrides for specific layout */
+
+.ui-datepicker
+{
+ font-size: 2em;
+ width: 80%;
+}
+
+.ui-selectmenu-menu
+{
+ font-size: 2em;
+}
+
+.ui-selectmenu-text
+{
+ font-size: 2em;
+ font-weight: bold;
+}
+

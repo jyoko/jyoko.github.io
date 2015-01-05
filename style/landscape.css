@@ -1,0 +1,42 @@
+/* For landscape shapes, duh */
+
+form
+{
+ width: 96%;
+ margin: 2%;
+}
+
+/* box model fix */
+
+input, textarea, select, button
+{
+ -webkit-box-sizing: border-box; /* legacy WebKit */
+ -moz-box-sizing: border-box; /* Gecko */
+ box-sizing: border-box;
+}
+
+/* Header style */
+
+span.headerLbl
+{
+ width: 40%;
+}
+
+form#header label
+{
+ padding: 0px;
+ width: 100%;
+ font-size: 3em;
+ font-style: italic;
+ border: 1px solid #000;
+}
+
+form#header input,select
+{
+ margin: 0px;
+ font-size: 1em;
+ max-width: 50%;
+ border: none;
+ vertical-align: middle;
+}
+

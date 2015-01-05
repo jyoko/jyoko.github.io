@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Worksheet - DATE</title>
+
+<!-- External files -->
+
+<link rel="stylesheet" href="./js/jquery-ui-1.11.2.custom/jquery-ui.min.css">
+<script src="./js/jquery-ui-1.11.2.custom/external/jquery/jquery.js"></script>
+<script src="./js/jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
+
+<!-- Internal files -->
+
+<link rel="stylesheet" href="./style/appizer.css">
+<link rel="stylesheet" media="(orientation: portrait)" href="./style/portrait.css">
+<link rel="stylesheet" media="(orientation: landscape)" href="./style/landscape.css">
+<link rel="stylesheet" media="(max-width: 900px)" href="./style/maxwidth.css">
+<link rel="stylesheet" media="(min-width: 900px)" href="./style/minwidth.css">
+<script src="./js/appizer/appizer.js"></script>
+
+</head>
+<body>
+
+<!-- Top bar, will absorb 'header' form -->
+
+<div class="header-bar">
+<h1>Restart</h1>
+<span>Test</section>
+</div>
+
+<!-- Header is whatever defines the sheet context -->
+
+<form id="header">
+
+<label class="onlyFullsize">
+<span class="headerLbl">Day</span>
+<input type="text" name="day" required id="day" placeholder="today">
+</label>
+
+<label>
+<span class="headerLbl">Date</span>
+<input type="text" name="date" class="appizerDate" required id="date" placeholder="MM/DD/YYYY">
+</label>
+
+<label>
+<span class="headerLbl">Truck</span>
+<select name="truck" id="truck">
+ <option value="1">518</option>
+ <option value="2">1020</option>
+ <option value="3">610</option>
+</select>
+</label>
+
+<label>
+<span class="headerLbl">Technician(s)</span>
+<select multiple name="techs" id="techs">
+ <option value="ONE">ONE</option>
+ <option value="TWO">TWO</option>
+</select>
+</label>
+
+<label class="notFullsize">
+<span class="headerLbl"></span>
+<input type="button" name="next0" value="Next">
+</label>
+</form>
+
+<!--
+     Here's the actual worksheet, main working screen
+-->
+
+<form id="sheet">
+
+<label for="location">Address or Building Name</label> 
+<input type="text" name="location" class="location">
+
+<label for="unit">Unit Number/Label</label>
+<input type="text" name="unit">
+
+<label for="client">Client - Who To Bill</label>
+<input type="text" name="client">
+
+<label for="areas">Number of Areas</label>
+<input type="number" name="areas">
+
+<label for="notes">Notes</label>
+<textarea name="notes">EG: Heavy deo, flood</textarea>
+
+<label for="price">Price</label>
+<input type="text" name="price">
+
+</form>
+
+</body>
+</html>

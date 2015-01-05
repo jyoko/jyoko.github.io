@@ -1,0 +1,42 @@
+/* For portrait orientations */
+
+form
+{
+ text-align: center;
+ width: 96%;
+ margin: 2%;
+ margin-top: -3%;
+}
+
+/* Header form styles */
+
+form#header input,select
+{
+ width: 85%;
+}
+
+/* Sheet form styles */
+
+form#sheet input,textarea
+{
+ max-width: 85%;
+}
+
+/* jQuery overrides for specific layout */
+
+.ui-datepicker
+{
+ font-size: 2em;
+ width: 80%;
+}
+
+.ui-selectmenu-menu
+{
+ font-size: 2em;
+}
+
+.ui-selectmenu-text
+{
+ font-size: 2em;
+ font-weight: bold;
+}

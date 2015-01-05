@@ -1,0 +1,62 @@
+/* My CSS is jumpled and repeated, but it's pretty easy to fix later with some diffs. Structure:
+ *
+ *   appizer.css : generic for all display types
+ *  portrait.css : Orientation-specific ONLY SMALL SCREENS
+ * landscape.css : Orientation-specific ONLY SMALL SCREENS
+ *  maxwidth.css : Small screen defaults
+ *  minwidth.css : Large screens, overrides orientation
+ *
+ * The order is important because it assumes you're developing for a phone/tablet device first
+ *  and working out to a typical widescreen monitor. Conceptually you're redesigning the large
+ *  paper form to be usable on the mobile device, then stacking up to a modern, reponsive,
+ *  USEFUL version of the paper documents.
+ */
+
+body
+{
+ margin: 0px;
+ padding: 0px;
+}
+
+/* Multiple Select via div/span for custom styles */
+
+div.multiSelect
+{
+ margin-top: 1em;
+}
+
+div.multiSelect span:hover
+{
+ background: #07a;
+}
+
+.multiVal
+{
+ display: block;
+ font-style: normal;
+}
+
+.multiSval
+{
+ display: block;
+ font-style: normal;
+ font-weight: bold;
+ background-color: #0fa;
+}
+
+span.multiAdd
+{
+ display: block;
+}
+
+.onlyFullsize
+{
+ display: none;
+}
+
+/* Popover boxes for SELECTs */
+
+input.magicBox
+{
+}
+
