@@ -5,8 +5,13 @@ label
  display: block;
  padding-top: 1em;
  margin-bottom: 1em;
- font-size: 3em;
+ font-size: 2em;
  border-top: 2px solid #006848;
+}
+
+form
+{
+ padding-top: 75px;
 }
 
 /* Floating header bar */
@@ -20,30 +25,25 @@ label
  position: fixed;
  top: 0px;
  left: 0px;
- background-color: #0a7;
-}
-
-.header-bar h1#logo
-{
- margin: 0;
- margin-top: 4px;
- font-size: 1.5em;
- padding-left: 80px;
- background-image: url(./cleanguy.png);
+ background-image: url(cleanguy.png);
  background-repeat: no-repeat;
+ padding-left: 77px;
+ background-color: #0a7;
 }
 
 .header-bar span
 {
  width: 100%;
- text-align: right;
+ padding-top:20px;
+ text-align: center;
+ font-size: 2em;
 }
 
 /* Header form styles */
 
 form#header
 {
- padding-top: 70px;
+ display: none;
 }
 
 form#header label
@@ -69,7 +69,7 @@ form#sheet label
 
 form#sheet input,textarea
 {
- font-size: 3em;
+ font-size: 2em;
  font-style: none;
  margin-bottom: 1.5em;
  text-align: center;
@@ -79,8 +79,8 @@ form#sheet input,textarea
 
 .ui-datepicker
 {
- font-size: 2em;
- width: 80%;
+ font-size: 1em;
+ width: 60%;
 }
 
 .ui-selectmenu-menu

@@ -39,7 +39,7 @@
 console.log(input);
         // Push example values in as fields change
         if (/^\d{2}\/\d{2}\/\d{4}$/.test(input)) {
-            $('#truck').html('<option value="518">518</option><option value="610">610</option>');
+            $('#truck').html('<option value="1">518</option><option value="3">610</option>');
         }
         if (input == '3') {
             $('#techs').html('<option value="Driver" selected>Driver</option><option value="Passenger">Passenger</option>');
@@ -109,6 +109,9 @@ $(function() {
 
     // Turn on appIzer, this is going to get pulled out soon
     $('#header').appIzer();
+    $('.toggleHeader').on('click.appizer',function(){
+        $('#header').toggle('blind');
+    });
 
 });
 
