@@ -1,22 +1,33 @@
 /* Small-screen devices */
 
+body
+{
+ background: linear-gradient(to right, #ffffff, #00aa77 90%);
+}
+
 label
 {
  display: block;
  padding-top: 1em;
- margin-bottom: 1em;
+ padding-bottom: 1.5em;
  font-size: 2em;
- border-top: 2px solid #006848;
+ border-top: 2px solid #afe;
+ background: linear-gradient(to right, #ffffff, #44aa77 90%, #00aa77);
 }
 
 form
 {
- padding-top: 75px;
+ margin-top: 70px;
+}
+
+.altLabel
+{
+ background: linear-gradient(to right, #ffffff 20%, #00aa77);
 }
 
 /* Floating header bar */
 
-.header-bar
+#header-bar
 {
  display: flex;
  width: 100%;
@@ -25,18 +36,26 @@ form
  position: fixed;
  top: 0px;
  left: 0px;
- background-image: url(cleanguy.png);
+ background: url(cleanguy.png),#079;
  background-repeat: no-repeat;
  padding-left: 77px;
- background-color: #0a7;
+ border-bottom: 3px solid #000;
 }
 
-.header-bar span
+#header-status
 {
  width: 100%;
+ margin-left: -77px;
  padding-top:20px;
  text-align: center;
  font-size: 2em;
+}
+
+.activeSheet
+{
+ background: url(../sheeticon.png);
+ background-repeat: no-repeat;
+ background-position: right top;
 }
 
 /* Header form styles */
@@ -69,9 +88,10 @@ form#sheet label
 
 form#sheet input,textarea
 {
- font-size: 2em;
+ width: 90%;
+ font-size: 1em;
  font-style: none;
- margin-bottom: 1.5em;
+ margin-top: 1em;
  text-align: center;
 }
 

@@ -126,9 +126,21 @@ $(function() {
 
     // appIze header
     $('#header').appIzer();
+    // TODO: Add this headerbar functionality
     $('.toggleHeader').on('click.appizer',function(){
         $('#header').toggle('blind');
+        $('#header-status').addClass('activeSheet').html($('#date').val());
     });
+
+    // appIzer hacks added here
+    var i=1;
+    $('label').each(function() {
+        if(i%2==0) {
+            $(this).addClass('altLabel');
+        }
+        i++;
+    });
+    $('label').after('<div class="divLine"></div>');
 
     // autocomplete sheet
     $('#location').autocomplete({

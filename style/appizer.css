@@ -18,6 +18,13 @@ body
  padding: 0px;
 }
 
+.divLine
+{
+ width: 100%;
+ height: 2px;
+ background-color: #006848;
+}
+
 /* Multiple Select via div/span for custom styles */
 
 div.multiSelect

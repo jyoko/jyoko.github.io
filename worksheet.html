@@ -25,8 +25,8 @@
 
 <!-- Top bar, will absorb 'header' form -->
 
-<div class="header-bar">
-<span class="toggleHeader">Worksheet</span>
+<div id="header-bar">
+<span id="header-status" class="toggleHeader">New Sheet</span>
 </div>
 
 <!-- Header is whatever defines the sheet context -->
@@ -40,7 +40,7 @@
 
 <label>
 <span class="headerLbl">Date</span>
-<input type="text" name="date" class="appizerDate" required id="date" placeholder="MM/DD/YYYY">
+<input type="date" name="date" class="appizerDate" required id="date">
 </label>
 
 <label>
@@ -72,23 +72,35 @@
 
 <form id="sheet">
 
-<label for="location">Address or Building Name</label> 
+<label>
+<span class="sheetLbl">Address or Building Name</span>
 <input type="text" name="location" id="location" class="location">
+</label>
 
-<label for="unit">Unit Number/Label</label>
+<label>
+<span class="sheetLbl">Unit Number/Label</span>
 <input type="text" name="unit" id="unit">
+</label>
 
-<label for="client">Client - Who To Bill</label>
+<label>
+<span class="sheetLbl">Client - Who To Bill</span>
 <input type="text" name="client" id="client">
+</label>
 
-<label for="areas">Number of Areas</label>
+<label>
+<span class="sheetLbl">Number of Areas</span>
 <input type="number" name="areas" id="areas">
+</label>
 
-<label for="notes">Notes</label>
+<label>
+<span class="sheetLbl">Notes</span>
 <textarea name="notes" id="notes">EG: Heavy deo, flood</textarea>
+</label>
 
-<label for="price">Price</label>
+<label>
+<span class="sheetLbl">Price</span>
 <input type="text" name="price" id="price">
+</label>
 
 </form>
 
