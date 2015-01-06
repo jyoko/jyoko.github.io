@@ -107,10 +107,38 @@ console.log(input);
 // on DOMready, initialize everything
 $(function() {
 
-    // Turn on appIzer, this is going to get pulled out soon
+    // For dummy searches
+    var locationSearch = [  'Canterbury',
+                            '123 Fake St',
+                            'Bentley',
+                            '3472 W Penn Ave'
+                         ];
+    var unitSearch     = [  '1','2','3','4','5','6','7','8','9','10',
+                            '2a','2b','2c','2b','2d','2e','2f'
+                         ];
+    var clientSearch   = [  'John Smith',
+                            'Mozart',
+                            'Generic Management',
+                            'Bill Olid',
+                            'Crazy Eddie',
+                            'CheapAss'
+                         ];
+
+    // appIze header
     $('#header').appIzer();
     $('.toggleHeader').on('click.appizer',function(){
         $('#header').toggle('blind');
+    });
+
+    // autocomplete sheet
+    $('#location').autocomplete({
+        source: locationSearch
+    });
+    $('#unit').autocomplete({
+        source: unitSearch
+    });
+    $('#client').autocomplete({
+        source: clientSearch
     });
 
 });
