@@ -1,0 +1,123 @@
+// Rewritten styles for clean-app
+
+@import 'normalize.less';
+@import 'lesshat-prefixed.less';
+@import 'scheme.less';
+@import 'materialshadow.less';
+
+// Variables defined here
+
+@minWidth: 900px;
+@maxWidth: 900px;
+
+@lblBorderRadius: 20px;
+
+@baseColor1:    @color1c;
+@baseColor2:    @color1;
+@altColor1:     @color3;
+@altColor2:     @color3c;
+@borderColor:   @color1a;
+
+// Any base tag modifications here
+
+body {
+  @media only screen and (max-width : @maxWidth) {
+    background: @baseColor1;
+  }
+  @media only screen and (min-width : @minWidth) {
+    background: #fff;
+  }
+}
+
+// State-ish classes, ie size visibility
+
+.notFullSize {
+  @media only screen and (min-width : @minWidth) {
+    display: none;
+  }
+}
+
+.onlyFullSize {
+  @media only screen and (max-width : @maxWidth) {
+    display: none;
+  }
+}
+
+// appHead is an optional component that defines context for appSheet
+.appHead {
+  display: flex;
+  @media only screen and (max-width : @maxWidth) {
+    flex-flow: row wrap;
+    background: @baseColor2;
+    border: 3px solid @borderColor;
+    .lh-border-radius(@lblBorderRadius + 30px);
+    .boxShadowHelper(3);
+  }
+  @media only screen and (min-width : @minWidth) {
+    flex-wrap: wrap;
+    border: 1px solid #000;
+  }
+  width: 95%;
+  .lh-justify-content(center);
+  margin-top: 1em;
+  margin-left: 2.5%;
+
+  label {
+    @media only screen and (max-width : @maxWidth) {
+      &:nth-child(odd) {
+        background: @altColor1;
+      }
+      &:nth-child(even) {
+        background: @baseColor1;
+      }
+      margin: 1% 4% 1% 4%;
+      width: 92%;
+      border: 2px solid @borderColor;
+      .lh-border-radius(@lblBorderRadius);
+      .boxShadowHelper(1);
+      &:hover,&:active {
+        background: @baseColor1 + #123;
+        &:nth-child(odd) {
+          background: @altColor1 + #132;
+        }
+        .boxShadowHelper(4);
+        transition: all 0.5s ease-out;
+        transform: translateY(-5px)
+      }
+    }
+    @media only screen and (min-width: @minWidth) {
+      width: 45%;
+      border: 1px solid #000;
+      margin: 1%;
+    }
+    padding: 10px;
+    font-size: 3em;
+    font-style: italic;
+  }
+  
+  input,date,select,textarea   {
+    font-style: normal;
+    text-align: center;
+    width: 100%;
+    @media only screen and (max-width : @maxWidth) {
+      .lh-border-radius(@lblBorderRadius - 5px);
+    }
+  }
+  
+  span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// appSheet is the guts of the app
+.appSheet {
+  .appHead;
+  font-style: normal;
+  span {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  margin-bottom: 3%;
+}

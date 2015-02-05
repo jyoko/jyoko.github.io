@@ -18,6 +18,14 @@ form
  display: initial;
 }
 
+/* Floating header */
+.header-bar {
+}
+
+form#header {
+  display: block;
+}
+
 /* box model fix */
 
 input, textarea, select, button

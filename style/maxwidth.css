@@ -27,7 +27,7 @@ form
 
 /* Floating header bar */
 
-#header-bar
+.header-bar
 {
  display: flex;
  width: 100%;

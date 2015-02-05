@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Clean-App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- External files 
+
+  <link rel="stylesheet" href="./js/jquery-ui-1.11.2.custom/jquery-ui.min.css">
+  <script src="./js/jquery-ui-1.11.2.custom/external/jquery/jquery.js"></script>
+  <script src="./js/jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
+  -->
+
+<!-- Internal files -->
+
+  <link rel="stylesheet/less" type="text/css" href="./less/clean.less" />
+  <script src="less/less.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  
+  <form class="appHead">
+
+    <label class="onlyFullSize">
+    <span class="headerLbl">Day</span>
+    <input type="text" name="day" required id="day" placeholder="today">
+    </label>
+
+    <label>
+    <span class="headerLbl">Date</span>
+    <input type="date" name="date" required id="date">
+    </label>
+
+    <label>
+    <span class="headerLbl">Truck</span>
+    <select name="truck" id="truck">
+     <option value="1">518</option>
+     <option value="2">1020</option>
+     <option value="3">610</option>
+    </select>
+    </label>
+
+    <label>
+    <span class="headerLbl">Technician(s)</span>
+    <select multiple name="techs" id="techs">
+     <option value="ONE">ONE</option>
+     <option value="TWO">TWO</option>
+    </select>
+    </label>
+
+    <label class="notFullSize">
+      <span class="headerLbl">Save</span>
+    </label>
+    
+  </form>
+
+  <form class="appSheet">
+
+    <label>
+      <span class="sheetLbl">Address or Building Name</span>
+      <input type="text" name="location" id="location" class="location">
+    </label>
+
+    <label>
+      <span class="sheetLbl">Unit Number/Label</span>
+      <input type="text" name="unit" id="unit">
+    </label>
+
+    <label>
+      <span class="sheetLbl">Client - Who To Bill</span>
+      <input type="text" name="client" id="client">
+    </label>
+
+    <label>
+      <span class="sheetLbl">Number of Areas</span>
+      <input type="number" name="areas" id="areas">
+    </label>
+
+    <label>
+      <span class="sheetLbl">Notes</span>
+      <textarea name="notes" id="notes">EG: Heavy deo, flood</textarea>
+    </label>
+
+    <label>
+      <span class="sheetLbl">Price</span>
+      <input type="text" name="price" id="price">
+    </label>
+
+  </form>
+
+</body>
+
+</html>

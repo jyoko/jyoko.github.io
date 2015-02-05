@@ -1,5 +1,5 @@
 README
 =========
-Making a visible clean-app demo here.
+UI demo in heavy jQuery and messy CSS
 
-That's it for now...
+Real version is almost completely rewritten
