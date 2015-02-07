@@ -207,7 +207,7 @@ th {
  * }
  *
  */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   body {
     background: #037ed0;
   }
@@ -215,6 +215,16 @@ th {
 @media only screen and (min-width: 900px) {
   body {
     background: #fff;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .notFullSize {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .onlyFullSize {
+    display: none;
   }
 }
 .appHead {
@@ -228,7 +238,7 @@ th {
   margin-top: 1em;
   margin-left: 2.5%;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .appHead {
     flex-flow: row wrap;
     background: #0066aa;
@@ -253,9 +263,8 @@ th {
   font-size: 3em;
   font-style: italic;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .appHead label {
-    background: #037ed0;
     margin: 1% 4% 1% 4%;
     width: 92%;
     border: 2px solid #00385e;
@@ -265,33 +274,162 @@ th {
     -moz-background-clip: padding;
     border-radius: 20px;
     background-clip: padding-box;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
-  .appHead label:hover {
+  .appHead label:nth-child(odd) {
+    background: #00aa6f;
+  }
+  .appHead label:nth-child(even) {
+    background: #037ed0;
+  }
+  .appHead label:hover,
+  .appHead label:active {
+    background: #14a0ff;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.5s ease-out;
     transform: translateY(-5px);
+  }
+  .appHead label:hover:nth-child(odd),
+  .appHead label:active:nth-child(odd) {
+    background: #11dd91;
   }
 }
 @media only screen and (min-width: 900px) {
   .appHead label {
     width: 45%;
     border: 1px solid #000;
+    margin: 1%;
   }
 }
 .appHead input,
 .appHead date,
-.appHead select {
-  font-style: none;
+.appHead select,
+.appHead textarea {
+  font-style: normal;
   text-align: center;
-  -webkit-border-radius: 15px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 15px;
-  -moz-background-clip: padding;
-  border-radius: 15px;
-  background-clip: padding-box;
+  width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  .appHead input,
+  .appHead date,
+  .appHead select,
+  .appHead textarea {
+    -webkit-border-radius: 15px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 15px;
+    -moz-background-clip: padding;
+    border-radius: 15px;
+    background-clip: padding-box;
+  }
 }
 .appHead span {
   display: inline-block;
   width: 100%;
   text-align: center;
+}
+.appSheet {
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 1em;
+  margin-left: 2.5%;
+  font-style: normal;
+  margin-bottom: 3%;
+}
+@media only screen and (max-width: 1200px) {
+  .appSheet {
+    flex-flow: row wrap;
+    background: #0066aa;
+    border: 3px solid #00385e;
+    -webkit-border-radius: 50px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 50px;
+    -moz-background-clip: padding;
+    border-radius: 50px;
+    background-clip: padding-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .appSheet {
+    flex-wrap: wrap;
+    border: 1px solid #000;
+  }
+}
+.appSheet label {
+  padding: 10px;
+  font-size: 3em;
+  font-style: italic;
+}
+@media only screen and (max-width: 1200px) {
+  .appSheet label {
+    margin: 1% 4% 1% 4%;
+    width: 92%;
+    border: 2px solid #00385e;
+    -webkit-border-radius: 20px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 20px;
+    -moz-background-clip: padding;
+    border-radius: 20px;
+    background-clip: padding-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .appSheet label:nth-child(odd) {
+    background: #00aa6f;
+  }
+  .appSheet label:nth-child(even) {
+    background: #037ed0;
+  }
+  .appSheet label:hover,
+  .appSheet label:active {
+    background: #14a0ff;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.5s ease-out;
+    transform: translateY(-5px);
+  }
+  .appSheet label:hover:nth-child(odd),
+  .appSheet label:active:nth-child(odd) {
+    background: #11dd91;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .appSheet label {
+    width: 45%;
+    border: 1px solid #000;
+    margin: 1%;
+  }
+}
+.appSheet input,
+.appSheet date,
+.appSheet select,
+.appSheet textarea {
+  font-style: normal;
+  text-align: center;
+  width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  .appSheet input,
+  .appSheet date,
+  .appSheet select,
+  .appSheet textarea {
+    -webkit-border-radius: 15px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 15px;
+    -moz-background-clip: padding;
+    border-radius: 15px;
+    background-clip: padding-box;
+  }
+}
+.appSheet span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.appSheet span {
+  font-size: 0.8em;
+  font-weight: bold;
 }
