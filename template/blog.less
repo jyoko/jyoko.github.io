@@ -1,0 +1,62 @@
+// Because I like LESS
+
+@import 'normalize.less';
+@import 'lesshat-prefixed.less';
+@import 'scheme.less';
+
+body {
+  font-family: serif;
+  background: @color1a;
+  color: #fff;
+}
+
+.topBar {
+  width: 100%;
+  background: @color1;
+}
+
+.siteName {
+  margin: 15px;
+  font-size: 3em;
+}
+
+.subHeading {
+  padding-left: 15%;
+  font-size: 1.8em;
+  color: @color4;
+  font-style: italic;
+}
+
+.subBar {
+  width: 100%;
+  margin: 15px 0 30px 0;
+  background: @color2;
+  text-align: right;
+}
+
+.subBarButton {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 5px;
+  background: @color2b;
+}
+
+.subBarButton:hover {
+  background: @color2c;
+}
+
+.postContainer {
+  width: 90%;
+  margin-left: 5%;
+  background: @color1c;
+  padding: 15px;
+  .lh-border-radius(30px);
+}
+
+.footer {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  background: @color3;
+  margin-top: 30px;
+}
